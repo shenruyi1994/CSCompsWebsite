@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Story by HTML5 UP</title>
+		<title>Where rubber meets the code</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,7 @@
 			<div id="wrapper" class="divided">
 
 				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" href="#home">
 						<div class="content">
 							<h1>Where Rubber Meets the Code</h1>
 							<!-- <a href="https://html5up.net">HTML5 UP</a> -->
@@ -26,7 +26,7 @@
 								<li><a href="#first" class="button big wide smooth-scroll-middle">Overview</a></li>
 								<li><a href="#second" class="button big wide smooth-scroll-middle">Demo</a></li>
 								<li><a href="#third" class="button big wide smooth-scroll-middle">Code</a></li>
-								<li><a href="#fourth" class="button big wide smooth-scroll-middle">Team</a></li>
+								<li><a href="#fifth" class="button big wide smooth-scroll-middle">Team</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -38,15 +38,111 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
 							<h2>Overview</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<p>
+							This repository provides  C++ plugin files, and XML model and world files to control the operation of an autonomous vehicle in a simulated environment.</p>
+
+							<p> This repository is submitted for partial fulfillment of the Carleton College Computer Science department capstone seminar. </p>
+
+							</p> This project is an extension of a previous Capstone Seminar.  The original project can be found at https://github.com/kileymaki/Self-Driving-Comps<p>
+
+
+							<h3> Current project contributors: </h3>
+							Kirsten Baker, Tom Choi, Will Richards, Ruyi Shen, and Ben Withbroe
+
+
+							<h3> Autonomous Vehicle Capabilities </h3>
+
+							<ul>
+							  <li>Accurately detect and follow straight and curved lanes </li>
+
+
+							<li> Detect and avoid reasonably sized obstacles and straight, and slightly curved lanes</li>
+
+							<li> Get back to original lane after performing an avoidance maneuver </li>
+
+							<li> Transition between any of these operations on a closed course indefinitely </li>
+
+							<h2> Vehicle Design </h2>
+
+							<p> <strong> High Level Controller </strong>
+
+							 - Controls the high level decision making of the vehicle.  Decides what ‘high level’ operation to perform ( avoid an obstacle, follow the road, return to lane etc.) </p>
+
+							<p> <strong> Low Level Controller  </strong>
+
+							- Controls the mechanical operation of the vehicle.  Once the HLC ‘decides where to go’, the LLC ensures that the car will go there. </p>
+
+							<p> <strong> Lidar </strong>
+
+							- Processes lidar sensor information from the cars lidar sensor to detect obstacles. </p>
+
+							<p> <strong> Camera </strong>
+
+							- Processes camera sensor information to detect road lanes, and generate waypoints along the road to follow. </p>
+
+							<p> <strong> GPS </strong>
+
+							 - Gets cars position in the world. </p>
+
+							<h3> Dependancies </h3>
+							<p> <strong> <a href="http://gazebosim.org"> Gazebo</a> </strong>
+							 - Physics simulator supporting our model, world, and plugin files </p>
+
+							<p> <strong> <a href="http://www.imm.dtu.dk/~kajm/FADBAD/"> FADBAD++ </a> </strong>
+
+							- Gazebo dependancy for automatic differentiation </p>
+
+							<p> <strong> <a href="http://www.boost.org"/> BOOST </a> </strong>
+
+							- Gazebo dependancy </p>
+
+							<p> <strong> <a href="http://opencv.org"> OpenCV </a> </strong>
+
+							- Camera Vision mathematics library used in image processing
+
+
+							<h3> Homebrew Install Guide </h3>
+
+							 <strong> (1) </strong> brew install gazebo6 (We do not guarantee support for any versions of gazebo later than gazebo 6.0)</li>
+
+							<ul> <li>this will also install dependant fadbad++ and boost library packages </li> </ul>
+
+							 <strong> (2) </strong> brew install opencv
+
+							 <ul> <li> Install Dependancy </li> </ul>
+
+							<strong> (3) </strong> git clone https://github.com/shenruyi1994/SelfDrivingCarTeamZero.git
+
+							<ul> <li> -Clone our repo </li> </ul>
+
+							<strong> (4) </strong> cd SelfDrivingCarTeamZero.git
+
+							<ul> <li> cd into cloned repo </li> </ul>
+
+							<strong> (5) </strong> mkdir build
+
+							 <ul> <li> Create build directory to hold our makefile </li> </ul>
+
+							<strong> (6) </strong> cd build && cmake .. && cd ..
+
+							 <ul> <li> Use CMake to generate makefile </li> </ul>
+
+							<strong> (7) </strong> ./sdcMake
+
+							<ul> <li> Run script to build the project </li> </ul>
+
+							<strong> (8) </strong> gazebo [worldfile.world] [-u]
+
+							<ul>
+							  <li> Pass gazebo the name of your worldfile as first paramater </li>
+							  <li> Use -u parameter to start the simulation in a paused state </li>
+							</ul>
+
+
+							</p>
 
 							<ul class="actions vertical">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#" class="button">Go Back</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -60,7 +156,7 @@
 							<h2>Demo</h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
 							<ul class="actions vertical">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#" class="button">Go Back</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -72,9 +168,10 @@
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="third">
 						<div class="content">
 							<h2>Code</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<p> Visit our GitHub repository <a href="https://github.com/shenruyi1994/SelfDrivingCarTeamZero">here</a>. </p>
+							<p> Download Gazebo <a href="http://gazebosim.org">here</a>. </p>
 							<ul class="actions vertical">
-								<li><a href="#" class="button">Learn More</a></li>
+								<li><a href="#" class="button">Go Back</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -82,229 +179,45 @@
 						</div>
 					</section>
 
-				<!-- Five -->
-					<section class="wrapper style1 align-center" id="fourth">
-						<div class="inner">
-							<h2>Team</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
-						</div>
-
-						<!-- Gallery -->
-							<div class="gallery style2 medium lightbox onscroll-fade-in">
-								<article>
-									<a href="images/gallery/fulls/01.jpg" class="image">
-										<img src="images/gallery/thumbs/01.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/02.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Feugiat Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/03.jpg" class="image">
-										<img src="images/gallery/thumbs/03.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Amet</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/04.jpg" class="image">
-										<img src="images/gallery/thumbs/04.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Tempus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/05.jpg" class="image">
-										<img src="images/gallery/thumbs/05.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ultrices Magna</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/06.jpg" class="image">
-										<img src="images/gallery/thumbs/06.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Tempus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/07.jpg" class="image">
-										<img src="images/gallery/thumbs/07.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/08.jpg" class="image">
-										<img src="images/gallery/thumbs/08.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Risus</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/09.jpg" class="image">
-										<img src="images/gallery/thumbs/09.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Tempus Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/10.jpg" class="image">
-										<img src="images/gallery/thumbs/10.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Sed Etiam</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/11.jpg" class="image">
-										<img src="images/gallery/thumbs/11.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Magna Lorem</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-								<article>
-									<a href="images/gallery/fulls/12.jpg" class="image">
-										<img src="images/gallery/thumbs/12.jpg" alt="" />
-									</a>
-									<div class="caption">
-										<h3>Ipsum Dolor</h3>
-										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
-										<ul class="actions">
-											<li><span class="button small">Details</span></li>
-										</ul>
-									</div>
-								</article>
-							</div>
-
-					</section>
-
 				<!-- Six -->
-					<section class="wrapper style1 align-center">
+					<section class="wrapper style1 align-center" id="fifth">
 						<div class="inner">
-							<h2>Team</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum.</p>
+							<h2>Meet the Team</h2>
+							<p>Our team are all car fanatics, we love racing cars, nascars, fire fighter cars, etc. OK. I am gonna stop making up more things... Truth is we all would love to have a life so convenient that cars can drive automatically for us. Gladly, we have made some progress. Check out our code session and fancy demos for more information! </p>
 							<div class="items style1 medium onscroll-fade-in">
 								<section>
 									<span class="icon style2 major fa-diamond"></span>
-									<h3>Lorem</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>The Main Figure</h3>
+									<p>I am the spiritural leader of this team, because I am the one and only car here. I was the gentleman in my day and now people admire my classical look. I am 2 meters long, running on four wheels, equipped with the smarted brain. Go check out my videos above! </p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-save"></span>
-									<h3>Ipsum</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>Kirsten Baker</h3>
+									<p>Kirsten is a 22 year old from Boulder, Colorado. She loves outer space, but she's apprehensive about going there. If Carleton offered an art minor, Kirsten would probably have one. Kirsten's two favorite car companies start with "l": Lamborghini and Lotus.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-bar-chart"></span>
-									<h3>Dolor</h3>
+									<h3>Tom Choi</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-wifi"></span>
-									<h3>Amet</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>Will Richard</h3>
+									<p>Will Richards is a 21 year old from Salt Lake City, Utah! He uses he/him pronouns.  He enjoys skiing, the great outdoors, and video games.  Will has a particular interest in computational biology and medicine.  Will’s favorite car is the Honda civic.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-cog"></span>
-									<h3>Magna</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
+									<h3>Ruyi Shen</h3>
+									<p>Ruyi wishes she could drive, but she just can’t, so she has been waiting for self-driving cars for her entire life. Now time has come and she can finally get around this country without bothering other people! BTW surprisingly or not, she has also been a top fan of F-1 car racing.</p>
 								</section>
 								<section>
 									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Tempus</h3>
+									<h3>Ben Withbroe</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 								</section>
-								<section>
-									<span class="icon style2 major fa-desktop"></span>
-									<h3>Aliquam</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-refresh"></span>
-									<h3>Elit</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-hashtag"></span>
-									<h3>Morbi</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bolt"></span>
-									<h3>Turpis</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-envelope"></span>
-									<h3>Ultrices</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-leaf"></span>
-									<h3>Risus</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
-								</section>
+								<ul class="actions vertical">
+									<li><a href="#" class="button">Go Back</a></li>
+								</ul>
 							</div>
 						</div>
 					</section>
@@ -312,26 +225,13 @@
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
 						<div class="inner medium">
-							<h2>Get in touch</h2>
-							<form method="post" action="#">
-								<div class="field half first">
-									<label for="name">Name</label>
-									<input type="text" name="name" id="name" value="" />
-								</div>
-								<div class="field half">
-									<label for="email">Email</label>
-									<input type="email" name="email" id="email" value="" />
-								</div>
-								<div class="field">
-									<label for="message">Message</label>
-									<textarea name="message" id="message" rows="6"></textarea>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
+							<h2>Special Thanks to</h2>
+							<p>Carleton CS department for providing this amazing opportunity</p>
+							<p>Mike Tie for all the technical supports</p>
+							<p>Friends and family for all the support</p>
+							<p>Our most amazing advisor Anna Rafferty for her great guidance and advice throughout the project</p>
 
-						</div>
+							</div>
 					</section>
 
 				<!-- Footer -->
@@ -344,7 +244,7 @@
 								<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
 								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
 							</ul>
-							<p>&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
