@@ -48,6 +48,11 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	video {
+		width: 100%    !important;
+		height: auto   !important;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
