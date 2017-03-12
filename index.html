@@ -5,166 +5,171 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Where rubber meets the code</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="divided">
+  <head>
+    <title>Where rubber meets the code</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-				<!-- One -->
-					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" href="#home">
-						<div class="content">
-							<h1>Where Rubber Meets the Code</h1>
-							<!-- <a href="https://html5up.net">HTML5 UP</a> -->
-							<p class="major"><!--[-->A Computer Science Senior Project, Carleton 2017.<!--]--></p>
-							<ul class="actions vertical">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Overview</a></li>
-								<li><a href="#second" class="button big wide smooth-scroll-middle">Demo</a></li>
-								<li><a href="#third" class="button big wide smooth-scroll-middle">Code</a></li>
-								<li><a href="#fifth" class="button big wide smooth-scroll-middle">Team</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img class="shiftImageRight" src="images/banner2.jpg" alt="" />
-						</div>
-					</section>
+  <body>
 
-				<!-- Two -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Overview</h2>
-							<p> This project includes  C++ plugin files, and XML model and world files to control the operation of an autonomous vehicle in a simulated environment.</p>
+    <!-- Wrapper -->
+    <div id="wrapper" class="divided">
 
-							<h3> <strong> Autonomous Vehicle Capabilities </strong></h3>
+      <!-- One -->
+      <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right" href="#home">
+        <div class="content">
+          <h1>Where Rubber Meets the Code</h1>
+          <!-- <a href="https://html5up.net">HTML5 UP</a> -->
+          <p class="major">
+            <!--[-->A Computer Science Senior Project, Carleton 2017.
+            <!--]-->
+          </p>
+          <ul class="actions vertical">
+            <li><a href="#first" class="button big wide smooth-scroll-middle">Overview</a></li>
+            <li><a href="#second" class="button big wide smooth-scroll-middle">Demo</a></li>
+            <li><a href="#third" class="button big wide smooth-scroll-middle">Code</a></li>
+            <li><a href="#fifth" class="button big wide smooth-scroll-middle">Team</a></li>
+          </ul>
+        </div>
+        <div class="image">
+          <img class="shiftImageRight" src="images/banner.jpg" alt="" />
+        </div>
+      </section>
 
+      <!-- Two -->
+      <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+        <div class="content">
+          <h2>Overview</h2>
+          <p> This project includes C++ plugin files, and XML model and world files to control the operation of an autonomous vehicle in a simulated environment.</p>
 
-							  <li>Accurately detect and follow straight and curved lanes </li>
-
-
-							<li> Detect and avoid reasonably sized obstacles and straight, and slightly curved lanes</li>
-
-							<li> Get back to original lane after performing an avoidance maneuver </li>
-
-							<li> Transition between any of these operations on a closed course indefinitely </li>
-
-							<p></p>
-
-							<h3> <strong>Vehicle Design </strong></h3>
-
-							<p> <strong> High Level Controller </strong>
-
-							 - Controls the high level decision making of the vehicle.  Decides what ‘high level’ operation to perform ( avoid an obstacle, follow the road, return to lane etc.) </p>
-
-							<p> <strong> Low Level Controller  </strong>
-
-							- Controls the mechanical operation of the vehicle.  Once the HLC ‘decides where to go’, the LLC ensures that the car will go there. </p>
-
-							<p> <strong> Lidar </strong>
-
-							- Processes lidar sensor information from the cars lidar sensor to detect obstacles. </p>
-
-							<p> <strong> Camera </strong>
-
-							- Processes camera sensor information to detect road lanes, and generate waypoints along the road to follow. </p>
-
-							<p> <strong> GPS </strong>
-
-							 - Gets cars position in the world. </p>
-
-							<h3>  <strong> Dependancies  </strong> </h3>
-							<p> <strong> <a href="http://gazebosim.org"> Gazebo</a> </strong>
-							 - Physics simulator supporting our model, world, and plugin files </p>
-							<p> <strong> <a href="http://www.imm.dtu.dk/~kajm/FADBAD/"> FADBAD++ </a> </strong>
-							- Gazebo dependancy for automatic differentiation </p>
-							<p> <strong> <a href="http://www.boost.org"/> BOOST </a> </strong>
-							- Gazebo dependancy </p>
-							<p> <strong> <a href="http://opencv.org"> OpenCV </a> </strong>
-							- Camera Vision mathematics library used in image processing
+          <h3> <strong> Autonomous Vehicle Capabilities </strong></h3>
 
 
-							<h3>  <strong> Homebrew Install Guide  </strong></h3>
-
-							 <strong> (1) </strong> brew install gazebo6 (We do not guarantee support for any versions of gazebo later than gazebo 6.0)</li>
-
-							<ul> <li>this will also install dependant fadbad++ and boost library packages </li> </ul>
-
-							 <strong> (2) </strong> brew install opencv
-
-							 <ul> <li> Install Dependancy </li> </ul>
-
-							<strong> (3) </strong> git clone https://github.com/shenruyi1994/SelfDrivingCarTeamZero.git
-
-							<ul> <li> -Clone our repo </li> </ul>
-
-							<strong> (4) </strong> cd SelfDrivingCarTeamZero.git
-
-							<ul> <li> cd into cloned repo </li> </ul>
-
-							<strong> (5) </strong> mkdir build
-
-							 <ul> <li> Create build directory to hold our makefile </li> </ul>
-
-							<strong> (6) </strong> cd build && cmake .. && cd ..
-
-							 <ul> <li> Use CMake to generate makefile </li> </ul>
-
-							<strong> (7) </strong> ./sdcMake
-
-							<ul> <li> Run script to build the project </li> </ul>
-
-							<strong> (8) </strong> gazebo [worldfile.world] [-u]
-
-							<ul>
-							  <li> Pass gazebo the name of your worldfile as first paramater </li>
-							  <li> Use -u parameter to start the simulation in a paused state </li>
-							</ul>
+          <li>Accurately detect and follow straight and curved lanes </li>
 
 
-							</p>
+          <li> Detect and avoid reasonably sized obstacles and straight, and slightly curved lanes</li>
 
-							<ul class="actions vertical">
-								<li><a href="#" class="button">Go Back</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
-						</div>
-					</section>
+          <li> Get back to original lane after performing an avoidance maneuver </li>
 
-					<!-- Five -->
-						<section class="wrapper style1 align-center" id="fourth">
-							<div class="inner">
-								<h2>Demo Videos</h2>
-								<p>These are demo videos of the car driving around the curves and avoiding obstacles appropriately, as well as a video that integrates both with nicer cinemetography. If these videos aren't loading properly, you can check them out at <a href="https://drive.google.com/drive/folders/0B1VhpqN_vPagR3RwRFBlNzdjT1U?usp=sharing" target="_blank">this</a> folder on google drive. </p>
-							</div>
+          <li> Transition between any of these operations on a closed course indefinitely </li>
 
-							<!-- Gallery -->
-								<div class="gallery style1 medium lightbox onscroll-fade-in">
-									<article>
-										<div class="video">
-											<video controls="controls" preload="true">
-												<source src="images/lane_following.mp4"" type="video/mp4" />
+          <p></p>
+
+          <h3> <strong>Vehicle Design </strong></h3>
+
+          <p> <strong> High Level Controller </strong> - Controls the high level decision making of the vehicle. Decides what ‘high level’ operation to perform ( avoid an obstacle, follow the road, return to lane etc.) </p>
+
+          <p> <strong> Low Level Controller  </strong> - Controls the mechanical operation of the vehicle. Once the HLC ‘decides where to go’, the LLC ensures that the car will go there. </p>
+
+          <p> <strong> Lidar </strong> - Processes lidar sensor information from the cars lidar sensor to detect obstacles. </p>
+
+          <p> <strong> Camera </strong> - Processes camera sensor information to detect road lanes, and generate waypoints along the road to follow. </p>
+
+          <p> <strong> GPS </strong> - Gets cars position in the world. </p>
+
+          <h3>  <strong> Dependancies  </strong> </h3>
+          <p> <strong> <a href="http://gazebosim.org"> Gazebo</a> </strong> - Physics simulator supporting our model, world, and plugin files </p>
+          <p> <strong> <a href="http://www.imm.dtu.dk/~kajm/FADBAD/"> FADBAD++ </a> </strong> - Gazebo dependancy for automatic differentiation </p>
+          <p> <strong> <a href="http://www.boost.org"/> BOOST </a> </strong> - Gazebo dependancy </p>
+          <p> <strong> <a href="http://opencv.org"> OpenCV </a> </strong> - Camera Vision mathematics library used in image processing
+
+
+            <h3>  <strong> Homebrew Install Guide  </strong></h3>
+
+            <strong> (1) </strong> brew install gazebo6 (We do not guarantee support for any versions of gazebo later than gazebo 6.0)</li>
+
+            <ul>
+              <li>this will also install dependant fadbad++ and boost library packages </li>
+            </ul>
+
+            <strong> (2) </strong> brew install opencv
+
+            <ul>
+              <li> Install Dependancy </li>
+            </ul>
+
+            <strong> (3) </strong> git clone https://github.com/shenruyi1994/SelfDrivingCarTeamZero.git
+
+            <ul>
+              <li> -Clone our repo </li>
+            </ul>
+
+            <strong> (4) </strong> cd SelfDrivingCarTeamZero.git
+
+            <ul>
+              <li> cd into cloned repo </li>
+            </ul>
+
+            <strong> (5) </strong> mkdir build
+
+            <ul>
+              <li> Create build directory to hold our makefile </li>
+            </ul>
+
+            <strong> (6) </strong> cd build && cmake .. && cd ..
+
+            <ul>
+              <li> Use CMake to generate makefile </li>
+            </ul>
+
+            <strong> (7) </strong> ./sdcMake
+
+            <ul>
+              <li> Run script to build the project </li>
+            </ul>
+
+            <strong> (8) </strong> gazebo [worldfile.world] [-u]
+
+            <ul>
+              <li> Pass gazebo the name of your worldfile as first paramater </li>
+              <li> Use -u parameter to start the simulation in a paused state </li>
+            </ul>
+
+
+          </p>
+
+          <ul class="actions vertical">
+            <li><a href="#" class="button">Go Back</a></li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="images/spotlight01.jpg" alt="" />
+        </div>
+      </section>
+
+      <!-- Five -->
+      <section class="wrapper style1 align-center" id="fourth">
+        <div class="inner">
+          <h2>Demo Videos</h2>
+          <p>These are demo videos of the car driving around the curves and avoiding obstacles appropriately, as well as a video that integrates both with nicer cinemetography. If these videos aren't loading properly, you can check them out at <a href="https://drive.google.com/drive/folders/0B1VhpqN_vPagR3RwRFBlNzdjT1U?usp=sharing"
+            target="_blank">this</a> folder on google drive. </p>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery style1 medium lightbox onscroll-fade-in">
+          <article>
+            <div class="video">
+              <video controls="controls" preload="true">
+                <source src="images/lane_following.mp4" " type="video/mp4 " />
 												Your browser does not support the video tag.
 											</video>
 										</div>
 									</article>
 									<article>
-										<div class="video">
-											<video controls="controls" preload="true">
-												<source src="images/obstacle_avoidance.mp4"" type="video/mp4" />
-												Your browser does not support the video tag.
-											</video>
-										</div>
-									</article>
-									<article>
-										<div class="video">
-											<video controls="controls" preload="true">
-												<source src="images/final_demo.mp4"" type="video/mp4" />
+										<div class="video ">
+											<video controls="controls " preload="true ">
+												<source src="images/obstacle_avoidance.mp4 "" type="video/mp4" /> Your browser does not support the video tag.
+              </video>
+            </div>
+          </article>
+          <article>
+            <div class="video">
+              <video controls="controls" preload="true">
+                <source src="images/final_demo.mp4" " type="video/mp4 " />
 												Your browser does not support the video tag.
 											</video>
 										</div>
@@ -173,66 +178,79 @@
 						</section>
 
 				<!-- Four -->
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="third">
-						<div class="content">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in " id="third ">
+						<div class="content ">
 							<h2>Code</h2>
-							<p> Visit our GitHub repository <a href="https://github.com/shenruyi1994/SelfDrivingCarTeamZero">here</a>. </p>
-							<p> Download Gazebo <a href="http://gazebosim.org">here</a>. </p>
-							<ul class="actions vertical">
-								<li><a href="#" class="button">Go Back</a></li>
+							<p> Visit our GitHub repository <a href="https://github.com/shenruyi1994/SelfDrivingCarTeamZero ">here</a>. </p>
+							<p> Download Gazebo <a href="http://gazebosim.org ">here</a>. </p>
+							<ul class="actions vertical ">
+								<li><a href="# " class="button ">Go Back</a></li>
 							</ul>
 						</div>
-						<div class="image">
-							<img src="images/spotlight03.jpg" alt="" />
+						<div class="image ">
+							<img src="images/spotlight01.jpg " alt=" " />
 						</div>
 					</section>
 
 				<!-- Six -->
-					<section class="wrapper style1 align-center" id="fifth">
-						<div class="inner">
+					<section class="wrapper style1 align-center " id="fifth ">
+						<div class="inner ">
 							<h2>Meet the Team</h2>
 							<p>Our team are all car fanatics, we love racing cars, nascars, fire fighter cars, etc. OK. I am gonna stop making up more things... Truth is we all would love to have a life so convenient that cars can drive automatically for us. Gladly, we have made some progress. Check out our code session and fancy demos for more information! </p>
-							<div class="items style1 medium onscroll-fade-in">
-								<section>
-									<span class="icon style2 major fa-diamond"></span>
-									<h3>The Main Figure</h3>
+							<div class="items style1 medium onscroll-fade-in ">
+							  <section>
+
+							  <h3>The Car</h3>
+ <a href="https://github.com/shenruyi1994/SelfDrivingCarTeamZero"><img src="images/car.png" height="100" width="100"></a>									
 									<p>I am the spiritural leader of this team, because I am the one and only car here. I was the gentleman in my day and now people admire my classical look. I am 2 meters long, running on four wheels, equipped with the smarted brain. Go check out my videos above! </p>
 								</section>
-								<section>
-									<span class="icon style2 major fa-save"></span>
-									<h3>Kirsten Baker</h3>
-									<p>Kirsten is a 22 year old from Boulder, Colorado. She loves outer space, but she's apprehensive about going there. If Carleton offered an art minor, Kirsten would probably have one. Kirsten's two favorite car companies start with "l": Lamborghini and Lotus.</p>
-								</section>
-								<section>
-									<span class="icon style2 major fa-bar-chart"></span>
-									<h3>Tom Choi</h3>
+							  <section>
+
+							  									<h3>Kirsten Baker</h3>
+
+								<a href="https://kirsten.space"><img src="images/kirsten.png" height="100" width="100"></a>
+									<p>Kirsten is a 22 year old from Boulder, Colorado. She loves outer space, but she's apprehensive about going there. If Carleton offered an art minor, Kirsten would probably have one. Kirsten's two favorite car companies start with "l ": Lamborghini and Lotus.</p>								</section>
+
+
+							  <section>
+
+							  <h3>Tom Choi</h3>
+<a href="http://choitom.com"><img src="images/tom.png" height="100" width="100"></a>									
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 								</section>
-								<section>
-									<span class="icon style2 major fa-wifi"></span>
-									<h3>Will Richard</h3>
+							  <section>
+							  <h3>Will Richards</h3>
+									 <a href="http://richardsw.com"><img src="images/will.png" height="100" width="100"></a>
+									
 									<p>Will Richards is a 21 year old from Salt Lake City, Utah! He uses he/him pronouns.  He enjoys skiing, the great outdoors, and video games.  Will has a particular interest in computational biology and medicine.  Will’s favorite car is the Honda civic.</p>
 								</section>
-								<section>
-									<span class="icon style2 major fa-cog"></span>
-									<h3>Ruyi Shen</h3>
+							  <section>
+
+							  <h3>Ruyi Shen</h3>
+							  <a href=" <a
+					href="http://ruyiisatraveller.weebly.com"><img
+					src="images/ruyi.png"
+							  height="100" width="100"></a>
+							  
 									<p>Ruyi wishes she could drive, but she just can’t, so she has been waiting for self-driving cars for her entire life. Now time has come and she can finally get around this country without bothering other people! BTW surprisingly or not, she has also been a top fan of F-1 car racing.</p>
 								</section>
 								<section>
-									<span class="icon style2 major fa-paper-plane"></span>
-									<h3>Ben Withbroe</h3>
+
+									<h3>Ben
+ Withbroe</h3>
+ <a href=" <a href="ben.com"><img src="images/ben.png" height="100" width="100"></a>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dui turpis, cursus eget orci amet aliquam congue semper. Etiam eget ultrices risus nec tempor elit.</p>
 								</section>
-								<ul class="actions vertical">
-									<li><a href="#" class="button">Go Back</a></li>
+								<ul class="actions vertical ">
+									<li><a href="# " class="button ">Go Back</a></li>
 								</ul>
 							</div>
 						</div>
 					</section>
 
 				<!-- Seven -->
-					<section class="wrapper style1 align-center">
-						<div class="inner medium">
+					<section class="wrapper style1 align-center ">
+						<div class="inner medium ">
 							<h2>Special Thanks to</h2>
 							<p>Carleton CS department for providing this amazing opportunity</p>
 							<p>Mike Tie for all the technical supports</p>
@@ -243,28 +261,25 @@
 					</section>
 
 				<!-- Footer -->
-					<footer class="wrapper style1 align-center">
-						<div class="inner">
-							<ul class="icons">
-								<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+					<footer class="wrapper style1 align-center ">
+						<div class="inner ">
+							<ul class="icons ">
+								<li><a href="https://github.com/shenruyi1994/SelfDrivingCarTeamZero" class="icon style2 fa-github "><span class="label ">Github</span></a></li>
+								<li><a href="mailto:richardsw@carleton.edu" class="icon style2 fa-envelope "><span class="label ">Email</span></a></li>
 							</ul>
-							<p>&copy; Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; Design: <a href="https://html5up.net ">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js "></script>
+			<script src="assets/js/jquery.scrollex.min.js "></script>
+			<script src="assets/js/jquery.scrolly.min.js "></script>
+			<script src="assets/js/skel.min.js "></script>
+			<script src="assets/js/util.js "></script>
+			<script src="assets/js/main.js "></script>
 
 	</body>
 </html>
